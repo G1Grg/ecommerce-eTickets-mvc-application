@@ -46,8 +46,8 @@
                 <div class="col-md-12">
                     <div class="card-footer">
                         <p class="card-text">
-                            <a class="btn btn-outline-primary float-end"><i class="bg bi-eye-fill"></i>Show Details</a>
-                            <a class="btn btn-success text-white"><i class="bg bi-cart-plus"></i>Add to Cart (Price @item.Price.ToString("c")) </a>
+                            <a class="btn btn-outline-primary float-end" asp-action="Details" asp-route-id="@item.Id"><i class="bg bi-eye-fill"></i> Show Details</a>
+                            <a class="btn btn-success text-white" ><i class="bg bi-cart-plus"></i>Add to Cart (Price @item.Price.ToString("c")) </a>
                         </p>
                     </div>
                 </div>

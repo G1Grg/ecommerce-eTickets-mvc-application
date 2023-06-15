@@ -1,4 +1,6 @@
-﻿namespace eTickets.Data.Base
+﻿using System.Linq.Expressions;
+
+namespace eTickets.Data.Base
 {
     // This entity is a generic repository<T>. Since we are referring to Classes, we will define it's type  Class. T:Class
     // IEntityBaseRepository will inherit the base entity from IEntityBase
@@ -7,6 +9,8 @@
     {
         //Return type IEnumerable and method is Getall()
         Task<IEnumerable<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includeProperties);
+
         Task<T> GetByIdAsync(int id);
         Task AddAsync(T entity);
         // update data in database for the new actor data
